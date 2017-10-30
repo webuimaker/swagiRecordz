@@ -7,4 +7,5 @@ gem "jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-youtube"
+  gem "jekyll-paginate"
 end
