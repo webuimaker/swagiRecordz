@@ -1,0 +1,48 @@
+- avatar: images/singers/Rahat-Fateh-Ali-Khan1.jpg
+  name: Rahat Fateh Ali Khan
+  position: Singer King
+  socials:
+    - link: http://twitter.com
+      icon: twitter
+    - link: http://facebook.com
+      icon: facebook
+    - link: http://facebook.com
+      icon: link 
+  desc:
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetue.
+- avatar: images/singers/Gurdass-Mann-2.jpg
+  name: Gurdass Mann
+  position: Famous Singer
+  socials:
+    - link: http://twitter.com
+      icon: twitter
+    - link: http://facebook.com
+      icon: facebook
+    - link: http://facebook.com
+      icon: link 
+  desc:
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetue.
+- avatar: images/singers/Miss-Pooja1_801027b56739cdb92d56c626fec062cc3.jpg
+  name: Miss Pooja
+  position: Mordern Singer
+  socials:
+    - link: http://twitter.com
+      icon: twitter
+    - link: http://facebook.com
+      icon: facebook
+    - link: http://facebook.com
+      icon: link 
+  desc:
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetue.
+- avatar: images/singers/Amrinder-Gill-22.jpg
+  name: Amrinder Gill
+  position: Modern Voice Singer
+  socials:
+    - link: http://twitter.com
+      icon: twitter
+    - link: http://facebook.com
+      icon: facebook
+    - link: http://facebook.com
+      icon: link 
+  desc:
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetue.

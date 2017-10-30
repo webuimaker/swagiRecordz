@@ -1,0 +1,355 @@
+---
+layout: default
+section_id: home
+slides:
+  - video: movie.mp4
+    klass: centered-text
+    small_title:
+      klass: bottom-to-top
+      text: We want to let you know about
+    title:
+      klass: bottom-to-top
+      text: Your Tag line
+aboutTitle: Top Singer of Punjab
+aboutDesc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+featuredVideo:  https://www.youtube.com/watch?v=x63KQTq8ShY
+featuredDesc: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+singers:
+  - image: images/singers/Amrinder-Gill-22.jpg
+    title: Amrinder Gill
+    link_to: #
+    klass: graphi-design
+    desc: Punjabi Singer
+  - image: images/singers/Babbu-MAnn1_e0af45508f176fcee89b704686367f47.jpg
+    title: Babbu Mann
+    link_to: #
+    klass: graphi-design
+    desc: Top  Singer
+  - image: images/singers/Diljit.jpg
+    title: Diljit
+    link_to: #
+    klass: graphi-design
+    desc: Singer and Artist
+  - image: images/singers/Gippy-Grewal.jpg
+    title: Gippy Grewal
+    link_to: 
+    klass: graphi-design
+    desc: Singer and Actor
+  - image: images/singers/Gurdass-Mann-2.jpg
+    title: Gurdass Mann
+    link_to: #
+    klass: graphi-design
+    desc: Top Singer
+  - image: images/singers/HAns-Raj-Hans1_f286a9068caefdf6107c35d13d557fc8.jpg
+    title: Hans Raj Hans
+    link_to: #
+    klass: graphi-design
+    desc: Classic Singer
+  - image: images/singers/Miss-Pooja1_801027b56739cdb92d56c626fec062cc3.jpg
+    title: Miss Pooja
+    link_to: #
+    klass: graphi-design
+    desc: Dancer and Singer
+  - image: images/singers/Nusrat-Fateh-Ali-Khan.jpg
+    title: Nusrat Fateh Ali Khan
+    link_to: #
+    klass: graphi-design
+    desc: Classical Singer
+
+
+services:
+  - icon: trophy
+    title: Web Design
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: cogs
+    title: Web Development
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: pagelines
+    title: Branding
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+  - icon: lock
+    title: Security
+    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+
+milestones:
+  - icon: folder-open
+    from: 0
+    to: 69
+    title: Song Completed
+  - icon: coffee
+    from: 0
+    to: 726
+    title: Songs offered
+  - icon: thumbs-up
+    from: 0
+    to: 59
+    title: Hit Songs
+  - icon: file-text
+    from: 0
+    to: 21
+    title: Songs Released
+
+---
+
+
+<div class='mod modDefaultSlider'>
+  <div class='sequence' data-autostop='on' data-timeout='0'>
+   <!-- <a class='sequence-prev' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <a class='sequence-next' href='javascript:void(0);'>
+      <span></span>
+    </a> 
+    <ul class='sequence-pagination'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'current' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
+    </ul>-->
+    <ul class='sequence-canvas'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign style = 'static' %}
+        {% else %}
+          {% assign style = '' %}
+        {% endif %}
+
+        <li class='frame {{style}} {{ slide.klass }}'>
+			{% if slide.bg %}
+				<div class='bg' style='background-image: url({{ slide.bg}});'></div>
+			{% endif %}
+			{% if slide.video %}
+				<div class='bg'>
+					<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="video/{{ slide.video}}" type="video/webm">
+<source src="video/{{ slide.video}}" type="video/mp4">
+</video>
+				
+				
+				</div>
+			{% endif %}
+         <!-- <div class='small-title {{ slide.small_title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.small_title.text }}</h2>
+              </div>
+            </div>
+          </div> -->
+         <!--  <div class='title {{ slide.title.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <h2>{{ slide.title.text }}</h2>
+              </div>
+            </div>
+          </div> -->
+          <div class='buttons-wrapper {{ slide.buttons.klass }}'>
+            <div class='row'>
+              <div class='large-12 columns'>
+                <div class='two spacing'></div>
+                {% for button in slide.buttons.items %}
+                  <a class='button {{ button.klass }}' href='{{ button.link_to }}'>{{ button.text }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="About Us" %}
+      <div class='spacing'></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      </p>
+      <div class='three spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='medium-5 columns'>
+      <img class="fadeinleft" alt="" src="images/FB_IMG_1507540939711.jpg" />
+      <div class='three spacing'></div>
+    </div>
+    <div class='medium-7 columns'>    
+        <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'> 
+            <h3>{{page.aboutTitle}}</h3>
+            <p>{{page.aboutDesc}}</p>
+         
+        </div>   
+    </div>
+  </div>
+</div>
+
+<div class="full" style="background: #f5f5f5; padding-top:0px;">
+  <div class="mod modGallery">
+    <ul class="gallery small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      {% for singer in page.singers %}
+        <li class="{{ work.klass }}">
+          <a >
+            <img alt="" src="{{ singer.image }}" />
+            <div class='overlay'>
+              <div class='thumb-info'>
+                <h3>{{ singer.title }}</h3>
+                <p>{{ singer.desc }}</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<div class="spacing"></div>
+
+<div class="full" style="background:#fff;">
+	<div class='row'>
+		<div class='medium-5  columns'>
+		 {% include section-header.html title="FEATURED MUSIC" %}
+		 <div class='spacing'></div>
+		  <p>
+			{{page.featuredDesc}}
+			
+		  </p>
+		</div>
+		<div class='medium-7 columns'>		
+		  {% youtube page.featuredVideo %}
+		</div>
+	</div>
+	<div class="two spacing"></div>
+</div>
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Top Singer" %}
+      <div class='spacing'></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+      </p>
+      <div class='two spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    {% for member in site.data.members %}
+      <div class='small-6 medium-3 large-3 columns'>
+        <div class='mod modTeamMember'>
+          <div class='member'>
+            <img class="avatar" alt="" src="{{ member.avatar }}" />
+            <div class='overlay'>
+              <div class='intro'>
+                <h3>{{member.name}}</h3>
+                <p>{{member.position}}</p>
+                <ul class='socials'>
+                  {% for social in member.socials %}
+                    <li>
+                      <a href='{{social.link}}'>
+                        <i class='fa fa-{{social.icon}}'></i>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!--
+
+
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Our services" %}
+      <div class='spacing'></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+      </p>
+      <div class='three spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='medium-6 columns'>
+      <img class="fadeinleft" alt="" src="images/@stock/responsive.png" />
+      <div class='three spacing'></div>
+    </div>
+    <div class='medium-6 columns'>
+      {% for service in page.services %}
+        <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
+          <div class='icon-text-simple'>
+            <i class='fa fa-{{service.icon}}'></i>
+            <h3>{{service.title}}</h3>
+            <p>{{service.desc}}</p>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
+-->
+
+<div class='full parallax' style='background-image: url(images/twitter-full-bg.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Current Status" color="#fff" %}
+      <div class='spacing'></div>
+      <p class='centered-text' style='color: #ccc;'>
+        Dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+      </p>
+      <div class='two spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    {% for milestone in page.milestones %}
+      <div class='medium-3 large-3 columns'>
+        <div class='mod modMilestone'>
+          <i class='fa fa-{{milestone.icon}}'></i>
+          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
+          <span>{{milestone.title}}</span>
+          <div class='four spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class='two spacing'></div>
+</div>
+
+
+<div class='full no-padding' >
+  <div class='two spacing'></div>
+  <div class='large-12 columns'>
+      {% include section-header.html title="Signup for Update"  %}
+      <div class='spacing'></div>
+	</div>
+  <div class='mod modCallToAction'>
+    <div class='row align-center'>
+      <div  class='medium-8 small-offset-2 small-centeredcolumns'>
+		  <div class='medium-8 columns'>
+			<p><input class="required" name="name" placeholder="Email Id" type="text"></p>
+		  </div>
+		  <div class='medium-4 columns '>
+			<a class='button' style="margin-top:7px;" href='#'>Submit</a>
+		  </div>
+	</div>
+	 
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>
