@@ -5,14 +5,14 @@
   path: about.html
   section_id: about
 - name: Releases
-  path: #
+  path: releases.html
   section_id: Releases
+- name: Gallery
+  path: #
+  section_id: gallery
 - name: Singers
   path: #
   section_id: Singers
 - name: Contact
-  path: #
+  path: contact.html
   section_id: contact
-- name: Blog
-  path: #
-  section_id: blog

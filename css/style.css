@@ -2930,7 +2930,10 @@ form input.error, form textarea.error {
   -o-transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  object-fit: cover;
+  height:100%;
 }
+
 .modGallery ul.gallery li {
   -moz-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
@@ -2941,6 +2944,8 @@ form input.error, form textarea.error {
   position: relative;
   display: block;
   overflow: hidden;
+  height:300px;
+  
 }
 .modGallery ul.gallery li a .overlay {
   opacity: 0;
@@ -3980,5 +3985,17 @@ background-color: #EF8037;}
 p { line-height: 1.8; margin-bottom: 1.8rem;}
 
 .align-center{text-align:center}
+.playlist .title{
+	text-align:center;
+	border-top:3px solid #f05a29;
+	border-bottom:3px solid #f05a29;
+	padding:10px 0px;
+}
+.playlist li  {
+	list-style:none;
+}
+.playlist li audio{
+	width:100%;
+}
 
 

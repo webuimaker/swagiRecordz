@@ -21,3 +21,11 @@ paginate_path: "blog/page:num"
 gems:
    - jekyll-youtube
    - jekyll-paginate
+
+collections:
+  album:
+    output: true
+  faq:
+    output: true
+  privacyTerms:
+    output: true

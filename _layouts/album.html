@@ -1,0 +1,74 @@
+---
+layout: default
+section_id: album
+---
+
+<div class='full parallax' style='background-image: url({{site.baseurl}}/images/twitter-full-bg.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Our Collections" tagline="Album/Songs" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+<div class='four spacing'></div>
+<div class='row'>	
+	<div class='large-5 columns'>
+	  <div class='images'>
+          <div class='image'><img alt="" src="{{site.url}}/{{page.images}}" /></div>
+      </div>
+	</div>
+	<div class='large-6 small-offset-1 columns'>
+		<h2>{{page.album}}</h2>
+		{% if page.song != "" and page.song != nil %}<p ><strong>Song:</strong> {{page.song}}</p> {% endif %}
+		{% if page.singer != "" and page.singer != nil %}<p><strong>Singer:</strong> {{page.singer}}</p>{% endif %}
+		{% if page.music != "" and page.music != nil %}<p><strong>Music:</strong> {{page.music}}</p>{% endif %}
+		{% if page.producer != "" and page.producer != nil %}<p><strong>Producer:</strong> {{page.producer}}</p>{% endif %}
+		{% if page.presentation != "" and page.presentation != nil %}<p><strong>Presentation:</strong> {{page.presentation}}</p>{% endif %}
+		{% if page.Projectby != "" and page.Projectby != nil %}<p><strong>Project By:</strong> {{page.Projectby}}</p>{% endif %}
+		{% if page.video != "" and page.video != nil %}<p><strong>Video:</strong> {{page.video}}</p>{% endif %}
+		{% if page.lyrics != "" and page.lyrics != nil %}<p><strong>Lyrics:</strong> {{page.lyrics}}</p> {% endif %}
+		{% if page.label != "" and page.label != nil %}<p><strong>Label:</strong> {{page.label}}</p>{% endif %}
+		{% if page.director != "" and page.director != nil %}<p><strong>Director:</strong> {{page.director}}</p>{% endif %}
+		{% if page.contact != "" and page.contact != nil %}<p><strong>Contact:</strong> {{page.contact}}</p>{% endif %}
+		
+			
+			<ul>				
+				{% for urlYoutube in page.youtubeUrl %}
+					{% if urlYoutube != "" and urlYoutube != nil %}
+					<strong>YouTube:</strong>
+					<li><a href="{{urlYoutube}}" target="_blank">{{urlYoutube}}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		
+		
+	</div>
+    <div class='four spacing'></div>
+</div>
+<div class='row playlist'>	
+	<div class='four spacing'></div>
+	<div class='large-12 columns'>
+		<h2 class="title">Playlist</h2>
+		
+		<ul class="">
+			{% for audioList in page.audioPlaylist %}
+			{% if audioList != "" and audioList != nil %}
+			<li>
+				<audio  preload="auto" tabindex="0" controls="" title="playTitle" >
+				  <source src="{{audioList}}" > </source>
+				  Your Fallback goes here
+				</audio>
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+		
+	</div>
+</div>
+
+<div class='row playlist'>	
+	<div class='four spacing'></div>
+	<div class='large-12 columns'>
+		{{content}}
+</div>
